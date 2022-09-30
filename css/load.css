@@ -1,0 +1,670 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	cursor: url(../img/蛇.cur),auto;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-selecct: none;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body,html {
+	height: 100%;
+	background-color: #eaeaea;
+}
+/* 皮肤 */
+.body0 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #eaeaea;
+}
+.body00 {
+	display: none;
+}
+.body0 #b1 {
+	position: absolute;
+	top: 100px;
+	left: 68px;
+	width: 24px;
+	height: 24px;
+	background: url(../fonts/14-冰激凌.svg) no-repeat
+}
+.body0 .b2 {
+	position: absolute;
+	top: 180px;
+	left: 168px;
+	width: 24px;
+	height: 24px;
+	background: url(../fonts/包子.svg) no-repeat
+}
+.body0 .b2:hover {
+	cursor: url(../img/cursor.cur),auto;
+	transform: translateY(4px);
+	transition: 0.3s;
+}
+.body0 .b2 div {
+	display: none;
+	width: 100px;
+	height: 50px;
+	border: 2px solid rgba(33,33,33,.5);
+	position: relative;
+	z-index: 3;
+	top: -5px;
+	left: 60px;
+	border-radius: 7px;
+	font-size: 15px;
+	line-height: 40px;
+	padding-left: 3px;
+	font-weight: 800;
+	color: rgba(33,33,33,.7);
+}
+.body0 .b2 div::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid rgba(33,33,33,.5);
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	right: 98px;
+}
+.body0 .b2 div::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	z-index: 2;
+	top: -6px;
+	right: 98px;
+	background-color: #eaeaea;
+}
+
+.body0 #b3 {
+	position: absolute;
+	top: 300px;
+	left: 568px;
+	width: 24px;
+	height: 24px;
+	background: url(../fonts/披萨.svg);
+}
+.body0 #b4 {
+	position: absolute;
+	top: 600px;
+	left: 668px;
+	width: 24px;
+	height: 24px;
+	background:url(../fonts/披萨.svg) ;
+}
+.body0 #b4 {
+	position: absolute;
+	top: 508px;
+	left: 1008px;
+	width: 24px;
+	height: 24px;
+	background: url(../fonts/果冻.svg);
+}
+.body0 #b5 {
+	position: absolute;
+	top: 244px;
+	left: 868px;
+	width: 24px;
+	height: 24px;
+	background: url(../fonts/汉堡.svg);
+}
+.body0 #b6 {
+	position: absolute;
+	top: 76px;
+	left: 439px;
+	width: 24px;
+	height: 24px;
+	background:url(../fonts/汉堡.svg) ;
+}
+.body0 #b7 {
+	position: absolute;
+	top: 200px;
+	left: 1140px;
+	width: 24px;
+	height: 24px;
+	background: url(../fonts/披萨.svg);
+}
+.body0 .b8 {
+	position: absolute;
+	top:466px;
+	left: 1266px;
+	width: 24px;
+	height: 24px;
+	background: url(../fonts/包子.svg);
+}
+.body0 .b8:hover {
+	cursor: url(../img/cursor.cur),auto;
+	transform: translateY(4px);
+	transition: 0.3s;
+}
+.body0 .b8 div {
+	display: none;
+	width: 100px;
+	height: 50px;
+	border: 2px solid rgba(33,33,33,.5);
+	position: relative;
+	z-index: 3;
+	top: -3px;
+	right: 130px;
+	border-radius: 7px;
+	font-size: 15px;
+	line-height: 40px;
+	padding-left: 3px;
+	font-weight: 800;
+	color: rgba(33,33,33,.7);
+}
+.body0 .b8 div::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid rgba(33,33,33,.5);
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 98px;
+}
+.body0 .b8 div::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	z-index: 2;
+	top: -6px;
+	left: 98px;
+	background-color: #eaeaea;
+}
+
+.body0 #bb1 {
+	position: absolute;
+	top: 222px;
+	left: 1022px;
+	width: 44px;
+	height: 44px;
+	background: url(../fonts/大披萨.svg);
+}
+.body0 #bb2 {
+	position: absolute;
+	top: 599px;
+	left: 368px;
+	width: 44px;
+	height: 44px;
+	background: url(../fonts/大串串烧.svg);
+}
+.body0 #bb3 {
+	position: absolute;
+	top: 646px;
+	left: 1066px;
+	width: 50px;
+	height: 44px;
+	background: url(../fonts/大汉堡.svg);
+}
+.body0 .bb4 {
+	position: absolute;
+	z-index: 3;
+	top: 66px;
+	left: 1400px;
+	width: 44px;
+	height: 44px;
+	background: url(../fonts/大奶酪.svg);
+}
+.body0 .bb4:hover {
+	cursor: url(../img/cursor.cur),auto;
+	transform: translateY(4px);
+	transition: 0.3s;
+}
+.body0 .bb4 div {
+	display: none;
+	width: 100px;
+	height: 50px;
+	border: 2px solid rgba(33,33,33,.5);
+	position: relative;
+	z-index: 3;
+	top: 10px;
+	right: 130px;
+	border-radius: 7px;
+	font-size: 12px;
+	line-height: 40px;
+	padding-left: 3px;
+	font-weight: 800;
+	color: rgba(33,33,33,.7);
+}
+.body0 .bb4 div::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid rgba(33,33,33,.5);
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 98px;
+}
+.body0 .bb4 div::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	z-index: 2;
+	top: -6px;
+	left: 98px;
+	background-color: #eaeaea;
+}
+.body0 #bb5 {
+	position: absolute;
+	top: 46px;
+	left: 920px;
+	width: 44px;
+	height: 44px;
+	background: url(../fonts/大饺子.svg);
+}
+.body0 .bb6 {
+	position: absolute;
+	top: 422px;
+	left: 240px;
+	width: 44px;
+	height: 44px;
+	background: url(../fonts/大面包.svg);
+}
+.body0 .bb6:hover {
+	cursor: url(../img/cursor.cur),auto;
+	transform: translateY(4px);
+	transition: 0.3s;
+}
+.body0 .bb6 div {
+	display: none;
+	width: 100px;
+	height: 50px;
+	border: 2px solid rgba(33,33,33,.5);
+	position: relative;
+	z-index: 3;
+	top: 0px;
+	left: 70px;
+	border-radius: 7px;
+	font-size: 15px;
+	line-height: 40px;
+	padding-left: 3px;
+	font-weight: 800;
+	color: rgba(33,33,33,.7);
+}
+.body0 .bb6 div::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid rgba(33,33,33,.5);
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	right: 98px;
+}
+.body0 .bb6 div::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	z-index: 2;
+	top: -6px;
+	right: 98px;
+	background-color: #eaeaea;
+}
+
+.body0 #bb7 {
+	position: absolute;
+	top: 500px;
+	left: 68px;
+	width: 44px;
+	height: 44px;
+	background: url(../fonts/大奶酪.svg);
+}
+.body0 #bb7:hover {
+	cursor: url(../img/cursor.cur),auto;
+	transform: translateY(4px);
+	transition: 0.3s;
+}
+.body0 .bb8 {
+	position: absolute;
+	top: 300px;
+	left: 1380px;
+	width: 44px;
+	height: 44px;
+	background: url(../fonts/大肘子.svg);
+}
+.body0 .bb8:hover {
+	cursor: url(../img/cursor.cur),auto;
+	transform: translateY(4px);
+	transition: 0.3s;
+}
+.body0 .bb8 div {
+	display: none;
+	width: 100px;
+	height: 50px;
+	border: 2px solid rgba(33,33,33,.5);
+	position: relative;
+	z-index: 3;
+	top: -1px;
+	right: 130px;
+	border-radius: 7px;
+	font-size: 15px;
+	line-height: 40px;
+	padding-left: 3px;
+	font-weight: 800;
+	color: rgba(33,33,33,.7);
+}
+.body0 .bb8 div::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid rgba(33,33,33,.5);
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 98px;
+}
+.body0 .bb8 div::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	z-index: 2;
+	top: -6px;
+	left: 98px;
+	background-color: #eaeaea;
+}
+
+.body0 .bb9 {
+	position: absolute;
+	top: 500px;
+	left: 588px;
+	width: 44px;
+	height: 44px;
+	background:url(../fonts/大肘子.svg) ;
+}
+.body0 .bb9:hover {
+	cursor: url(../img/cursor.cur),auto;
+	transform: translateY(4px);
+	transition: 0.3s;
+}
+.body0 .bb9 div {
+	display: none;
+	width: 100px;
+	height: 50px;
+	border: 2px solid rgba(33,33,33,.5);
+	position: relative;
+	z-index: 3;
+	top: -1px;
+	right: 130px;
+	border-radius: 7px;
+	font-size: 16px;
+	line-height: 40px;
+	padding-left: 3px;
+	font-weight: 800;
+	color: rgba(33,33,33,.7);
+}
+.body0 .bb9 div::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid rgba(33,33,33,.5);
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 98px;
+}
+.body0 .bb9 div::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	z-index: 2;
+	top: -6px;
+	left: 98px;
+	background-color: #eaeaea;
+}
+
+.body1 {
+	width: 100%;
+	/* height: 100%; */
+	background-size: cover;
+	background: linear-gradient(-45deg, #ee9f8b, #e7a2e4, #86d5d3, #75c590);
+	background-size: 400% 400%;
+	animation: moveBg 7s linear infinite;
+	align-items: center;
+	justify-content: center;
+}
+
+@keyframes moveBg {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+/* 版心样式 */
+.main {
+	width: 980px;
+	height: 100%;
+	margin: 0 auto;
+	padding-top: 150px;
+	/* background-color: aqua; */
+}
+/* 游戏名盒子样式 */
+.game_name {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	text-align: center;
+	cursor: default;
+}
+.game_name .snake {
+	position: absolute;
+	top: -15px;
+	left: 508px;
+	z-index: -1;
+	width: 88px;
+	height: 88px;
+	background: url(../img/蛇.svg) no-repeat;
+	cursor: default;
+}
+.game_name h1 {
+	/* font-size: 44px; */
+	font-size: 48px;
+	text-shadow: 3px 3px rgba(209, 138, 6, 0.6);
+	color: #1e1e1e;
+}
+/* 选项盒子样式 */
+.options {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin-top: 100px;
+	text-align: center;
+}
+.options li {
+	margin-bottom: 60px;
+}
+.options li a {
+	display: inline-block;
+	color: #333;
+	font-size: 30px;
+	font-weight: 600;
+	padding: 10px 50px;
+	border: 3px solid #666;
+	border-radius: 999px;
+}
+.options li a:hover {
+	box-shadow: 8px 4px 4px -4px #333;
+	transition: 0.5s;
+	/* transform: translate(-5px,-5px); */
+	background-color: #d9d9d9;
+}
+.options a:active {
+	transform: translateY(6px);
+}
+/* 左下角设置盒子样式 */
+.setting {
+	position: relative;
+	top: 40px;
+	left: 830px;
+	width: 50px;
+	height: 50px;
+}
+/* 设置图标 */
+#setting {
+	position: absolute;
+	top: -50px;
+	right: 50px;
+	width: 46px;
+	height: 46px;
+	background: url(../fonts/设置.svg) no-repeat;
+	transition: all 0.6s;
+	cursor: url(../img/蛇.cur),auto;
+}
+/* 特效盒子样式 */
+.setting #d {
+	position: absolute;
+	top: -50px;
+	left: 0;
+	width: 92px;
+	height: 46px;
+	display: none;
+}
+/* 声音图标样式 */
+.music {
+	position: absolute;
+	top: 0;
+	left: 5px;
+	width: 46px;
+	height: 46px;
+	background: url(../fonts/声音.svg) no-repeat;
+	transition: 0.2s;
+	cursor: url(../img/蛇.cur),auto;
+}
+.music:hover {
+	transform: translateX(3px);
+}
+/* 静音图标样式 */
+.music0 {
+	background: url(../fonts/声音关闭.svg) no-repeat;
+	cursor: url(../img/蛇.cur),auto;
+}
+.current {
+	transform: rotate(180deg);
+}
+/* 更多图标样式 */
+ #more{
+	position: absolute;
+	top: 5px;
+	left: 54px;
+	width: 46px;
+	height: 46px;
+	background: url(../fonts/登录.svg) no-repeat;
+	cursor: url(../img/蛇.cur),auto;
+}
+#more .more0 {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 47px;
+	width: 240px;
+	height: 110px;
+	border-radius: 15px;
+	border: 2px solid rgba(33,33,33,.5);
+	color: rgba(33,33,33,.7);
+	font-size: 18px;
+	line-height: 12px;
+	padding-left: 5px;
+	padding-top: 10px;
+}
+#more:hover {
+	transform: translateX(3px);
+	transition: 0.2s;
+}
+#more:active {
+	transform: translateY(3px);
+	transition: 0.2s;
+}
+/* 小眼睛样式 */
+#top_right {
+	position: relative;
+	z-index: 30;
+	top: -359px;
+	right: -345px;
+	width: 86px;
+	height: 86px;
+	background: url(../fonts/甜甜圈.svg) no-repeat;
+}
+.eyetr {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	border-radius: 24px;
+	margin-top: -11.5px;
+	margin-left: -12.5px;
+	overflow: hidden;
+	background-color: #fff;
+}
+.eyetr:hover {
+	cursor: url(../img/蛇.cur),auto;
+}
+.options .say {
+	position: absolute;
+	z-index: 10;
+	top: -70px;
+	left: 430px;
+	display: none;
+	width: 80px;
+	height: 40px;
+	border: 3px solid rgba(33,33,33,.5);
+	border-radius: 15px;
+	color: rgba(33,33,33,.7);
+	font-size: 15px;
+	font-weight: 800;
+	padding-left: 3px;
+	line-height: 35px;
+	text-align: center;
+} 
+.balltr {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 16px;
+	height: 16px;
+	transform: translate(-50%,-50%);
+	background-color: #000;
+	border-radius: 16px;
+	border: 3px solid #333;
+}

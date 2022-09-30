@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	cursor: url(../img/蛇.cur),auto;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-selecct: none;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body,html {
+	height: 100%;
+}
+.setArea {
+	width: 100%;
+	height: 48px;
+	background-color: #1e1e1e;
+	border-radius: 0 0 10px 10px;
+}
+.setArea .name {
+	float: left;
+	margin-left: 20px;
+	padding: 10px 6px;
+	font-size: 20px;
+	color: #fff;
+	font-weight:600;
+	transition: 0.2s;
+}
+.setArea .name a{
+	color: #EAEAEA;
+}
+.setArea .name:hover {
+	transform: translateX(-3px);
+}
+.setArea .back {
+	position: absolute;
+	top: 8px;
+	left: 164px;
+	width: 80px;
+	height: 30px;
+	background: url(../fonts/箭头.svg) no-repeat;
+}
+.setArea .score {
+	float: right;
+	margin-right: 2px;
+	padding: 12.5px 6px;
+	font-size: 16px;
+	color: #fff;
+	font-weight:400;
+}
+.setArea .scoreShow {
+	float: right;
+	margin-right: 20px;
+	padding: 12.5px 2px;
+	font-size: 16px;
+	color: #fff;
+	font-weight:400;
+}
+.setArea ul {
+	float: right;
+	margin-right: 20px;
+}
+.setArea li {
+	float: left;
+	width: 24px;
+	height: 24px;
+}
+.sound {
+	padding: 20px 20px 28px 35px;
+	background:url(../fonts/游戏声音%20.svg) no-repeat 17px 12.5px;
+}
+.sound0 {
+	background: url(../fonts/哟西声音关闭%20.svg) no-repeat 17px 12.5px;
+}
+.stop {
+	padding: 20px 16px 28px 35px;
+	background: url(../fonts/暂停.svg) no-repeat 14px 12.5px;
+}
+.stop0 {
+	background: url(../fonts/开始游戏.svg) no-repeat 16.5px 14.5px;
+}
+
+.playArea {
+	width: 1000px;
+	height: 600px;
+	margin: 50px auto;
+	position: relative;
+	background-color: aquamarine;
+}
+
+#snakeFather {
+	width: 1000px;
+	height: 600px;
+	background: forestgreen;
+	border: 20px solid darkolivegreen;
+	position: relative;
+}
+
+#snakeFather div{
+	width: 20px;
+	height: 20px;
+}
+
+.snakeHead {
+	background-image: url(../img/right.png);
+	background-size: cover;
+}
+
+.snakeBody {
+	background-image: url(../img/body.png);
+	background-size: cover;
+	
+}
+
+.food {
+	background-image: url(../img/food.png);
+	background-size: cover;
+}

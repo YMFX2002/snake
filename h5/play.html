@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>A snake's life</title>
+		<link rel="stylesheet" type="text/css" href="../css/play.css"/>
+		<script src="../jquery.min.js"></script>
+	</head>
+	<body>
+
+
+		<!-- nav区域开始 -->
+		<div class="setArea">
+			<!-- 游戏名字部分开开始 -->
+			<span class="name"><a href="load.html">A snake's life</a></span>
+			<span class="back"></span>
+			<!-- 游戏名字部分结束 -->
+			
+		</div>
+		<!-- nav区域结束 -->
+
+
+		<div class="trips">提示：通过方向键控制蛇的走位即可</div>
+		<div class="playArea">
+
+			<div id="snakeFather">
+				<!-- <div class="snakeHead"></div>
+				<div class="snakeBody"></div>
+				<div class="food"></div> -->
+			</div>
+		</div>
+	</body>
+
+
+	<script src="../js/load.js"></script>
+	<script type="text/javascript">
+		//声音和暂停效果
+		$(".sound").click(function(){
+			$(this).toggleClass("sound0");
+		})
+		$(".stop").click(function(){
+			$(this).toggleClass("stop0");
+		})
+	</script>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>A snake's life</title>
+		<!-- <embed src="../music/主页.mp3" autostart="true" loop="true" hidden="true">aaa</embed> -->
+		<link rel="stylesheet" type="text/css" href="../css/load.css"/>
+		<script src="../jquery.min.js"></script>
+	</head>
+	<body class="body">
+		<audio src="../music/主页.mp3" id="music" autoplay="autoplay" controls="controls" preload="auto"></audio>
+		
+		<!-- 界面主体部分开始 -->
+		<div class="main">
+			<!-- 游戏默认皮肤 -->
+			<div class="body0">
+				<span id="b1"></span>
+				<span class="b2">
+					<div>
+						我是韭菜包子
+					</div>
+				</span>
+				<span id="b3"></span>
+				<span id="b4"></span>
+				<span id="b5"></span>
+				<span id="b6"></span>
+				<span id="b7"></span>
+				<span class="b8">
+					<div>
+						我是猪肉包子
+					</div>
+				</span>
+				<span id="bb1"></span>
+				<span id="bb2"></span>
+				<span id="bb3"></span>
+				<span class="bb4">
+					<div>
+						你也是奶酪控？
+					</div>
+				</span>
+				<span id="bb5"></span>
+				<span class="bb6">
+					<div>
+						你看我像啥？
+					</div>
+				</span>
+				<span id="bb7"></span>
+				<span class="bb8">
+					<div>
+						我也是大肘子
+					</div>
+				</span>
+				<span class="bb9">
+					<div>
+						我是大肘子
+					</div>
+				</span>
+			</div>
+			<!-- 欢迎词 游戏名开始 -->
+			<div class="game_name">
+				<h1>WELCOME TO A SNAKE'S LIFE</h1>
+				<div class="snake"></div>
+			</div>
+			<!-- 欢迎词 游戏名结束 -->
+			<!-- 选项部分开始 -->
+			<div class="options">
+				<div class="say">
+					你瞅啥？
+				</div>
+				<ul>
+					<li class="start"><a href="play.html" class="a">开始游戏</a></li>
+					<li><a href="javascript:;" class="b">更换皮肤</a></li>
+				</ul>
+			</div>
+			<!-- 选项部分结束 -->
+			<!-- 左下角设置部分开始 -->
+			<div class="setting">
+				<span id="setting"></span>
+				<div id="d">
+					<span class="music"></span>
+					<span id="more">
+						<span class="more0"><p style="text-align: center; font-size: 16px; font-weight: 600;">游戏名</p><br><p style="text-align: center; font-size: 20px; font-weight: 800;">A snake's life</p><br><p style="text-align: center; font-size: 14px; font-weight: 600;">开发团队： &nbsp;&nbsp;我这没头发了</p><br><p style="text-align: center; font-size: 14px; font-weight: 600;">版本：1.0 （敬请期待更多作品）</p></span>
+					</span>
+				</div>
+			</div>
+			<!-- 左下角设置部分结束 -->
+			
+			<!-- 小眼睛部分开始 -->
+			<div id="top_right">
+				<div class="eyetr">
+					<div class="balltr"></div>
+				</div>
+			</div>
+			<!-- 小眼睛部分结束 -->
+		</div>
+		<!-- 界面主体部分结束 -->
+		
+		<script type="text/javascript">
+			// 选项部分特效
+			var a = document.querySelector(".a");
+			var b = document.querySelector(".b");
+			a.onmouseout = function () {
+			    a.style.transition = "all 0.3s";
+			}
+		
+			b.onmouseout = function () {
+			    b.style.transition = "all 0.3s";
+			}
+			
+			// 换肤功能
+			$(".b").click(function(){
+				$(".body0").toggleClass("body00");
+				$(".body").toggleClass("body1");
+			})
+	
+			// 左下角设置部分 鼠标经过特效
+			// $(".setting").mouseenter(function(){
+			// 	$(this).children("#d").stop().fadeIn(300);
+			// })
+			// $(".setting").mouseleave(function(){
+			// 	$(this).children("#d").stop().fadeOut(249);
+			// })
+			//这里下拉 配合旋转更搭一些
+			$(".setting").hover(function(){
+				$(this).children("#d").stop().slideToggle(300);
+			})
+			$("#setting , #d").hover(function(){
+				$("#setting").toggleClass("current");
+			})
+			 $(".music").click(function(){
+				 $(this).toggleClass("music0");
+			})
+			//更多特效
+			$("#more").hover(function(){
+				$(this).children(".more0").stop().fadeToggle(200);
+			})
+			
+		
+			// 奶酪特效
+			$(".bb4").mouseenter(function(){
+				$(this).children("div").stop().fadeIn(249);
+			})
+			$(".bb4").mouseleave(function(){
+				$(this).children("div").stop().fadeOut(1);
+				$(this).children("div").html("你也是奶酪控？");
+			})
+			$(".bb4").click(function(){
+				$(this).children("div").html("巧呀！我也是！");
+			})
+			//大肘子特效
+			$(".bb9").mouseenter(function(){
+				$(this).children("div").stop().fadeIn(249);
+			})
+			$(".bb9").mouseleave(function(){
+				$(this).children("div").stop().fadeOut(100);
+			})
+			$(".bb8").mouseenter(function(){
+				$(this).children("div").stop().fadeIn(249);
+			})
+			$(".bb8").mouseleave(function(){
+				$(this).children("div").stop().fadeOut(100);
+			})
+			// 大面包特效
+			$(".bb6").mouseenter(function(){
+				$(this).children("div").stop().fadeIn(249);
+			})
+			$(".bb6").mouseleave(function(){
+				$(this).children("div").stop().fadeOut(1);
+				$(this).children("div").html("你看我像啥?")
+			})
+			$(".bb6").click(function(){
+				$(this).children("div").html("我其实是面包");
+			})
+			// 包子特效
+			$(".b2").mouseenter(function(){
+				$(this).children("div").stop().fadeIn(249);
+			})
+			$(".b2").mouseleave(function(){
+				$(this).children("div").stop().fadeOut(100);
+			})
+			$(".b8").mouseenter(function(){
+				$(this).children("div").stop().fadeIn(249);
+			})
+			$(".b8").mouseleave(function(){
+				$(this).children("div").stop().fadeOut(100);
+			})
+			// 眼睛特效
+			var ball = document.querySelector(".balltr");
+			document.onmousemove = function(){
+				var x = event.clientX * 100 / window.innerWidth + "%";
+				ball.style.left = x;
+				var y = event.clientY * 100 / window.innerHeight + "%";
+				ball.style.top = y;
+				ball.style.transform = "translate(-"+x+",-"+y+")";
+			}
+			$(".eyetr").mouseenter(function(){
+				$(".options").children(".say").stop().fadeIn(249);
+			})
+			$(".eyetr").mouseleave(function(){
+				$(".options").children(".say").stop().fadeOut(1);
+				$(".options").children(".say").html("你瞅啥？");
+			})
+			$(".eyetr").click(function(){
+				$(".options").children(".say").html("你还瞅！");
+			})
+		</script>
+	</body>
+	
+</html>
